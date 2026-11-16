@@ -128,6 +128,13 @@ impl From<&str> for Utf8Bytes {
     }
 }
 
+impl From<Utf8Bytes> for Bytes {
+    #[inline]
+    fn from(bytes: Utf8Bytes) -> Self {
+        bytes.0
+    }
+}
+
 impl TryFrom<Bytes> for Utf8Bytes {
     type Error = Utf8Error;
 
