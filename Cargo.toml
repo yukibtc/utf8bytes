@@ -1,0 +1,20 @@
+[package]
+name = "utf8bytes"
+version = "0.1.0"
+edition = "2021"
+description = "A cheaply cloneable UTF-8 string type"
+authors = ["Yuki Kishimoto <yukikishimoto@protonmail.com>"]
+homepage = "https://github.com/yukibtc/utf8bytes"
+repository = "https://github.com/yukibtc/utf8bytes.git"
+license = "MIT"
+readme = "README.md"
+rust-version = "1.57"
+keywords = ["bytes", "utf8"]
+
+[features]
+default = ["std"]
+std = ["bytes/std", "alloc"]
+alloc = []
+
+[dependencies]
+bytes = { version = "1", default-features = false }
